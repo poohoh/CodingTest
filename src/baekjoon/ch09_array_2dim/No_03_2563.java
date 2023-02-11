@@ -1,4 +1,4 @@
-package ch09_array_2dim;
+package baekjoon.ch09_array_2dim;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 public class No_03_2563 {
 
-    //false: Èò»ö, true: °ËÁ¤»ö
+    //false: ï¿½ï¿½ï¿½, true: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     static boolean[][] arr = new boolean[100][100];
     
     public static void main(String args[]) throws IOException {

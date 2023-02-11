@@ -1,11 +1,11 @@
-package ch10_sort;
+package baekjoon.ch10_sort;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class No_04_2751 {
+public class No_05_10989_2 {
     public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
@@ -24,6 +24,5 @@ public class No_04_2751 {
         }
 
         System.out.println(sb);
-
     }
 }

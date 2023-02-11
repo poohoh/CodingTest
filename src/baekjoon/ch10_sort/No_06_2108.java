@@ -1,9 +1,8 @@
-package ch10_sort;
+package baekjoon.ch10_sort;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class No_06_2108 {
     public static void main(String args[]) throws IOException {
@@ -11,22 +10,22 @@ public class No_06_2108 {
 
         int temp, sum = 0;
         int num = Integer.parseInt(br.readLine());
-        int[] cnt = new int[8001];      // -4000ºÎÅÍ 4000±îÁö ( ÀÔ·Â°ª + 4000 )
-        int[] arr = new int[num];       // Á¤·ÄµÈ ¹è¿­
+        int[] cnt = new int[8001];      // -4000ï¿½ï¿½ï¿½ï¿½ 4000ï¿½ï¿½ï¿½ï¿½ ( ï¿½Ô·Â°ï¿½ + 4000 )
+        int[] arr = new int[num];       // ï¿½ï¿½ï¿½Äµï¿½ ï¿½è¿­
 
-        // cnt ¹è¿­ ÃÊ±âÈ­
+        // cnt ï¿½è¿­ ï¿½Ê±ï¿½È­
         for (int i = 0; i < cnt.length; i++) {
             cnt[i] = 0;
         }
 
-        // °¢ ¼ýÀÚ °³¼ö¸¦ ¼¼¾î¼­ cnt¹è¿­¿¡ ÀúÀå
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î¼­ cntï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         for (int i = 0; i < num; i++) {
             temp = Integer.parseInt(br.readLine());
             sum += temp;
             cnt[temp + 4000]++;
         }
 
-        // cnt ¹è¿­À» ÅëÇØ Á¤·ÄµÈ arr ¹è¿­ ±¸ÇÏ±â
+        // cnt ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Äµï¿½ arr ï¿½è¿­ ï¿½ï¿½ï¿½Ï±ï¿½
         int k = 0;
 
         for (int i = 0; i < cnt.length; i++) {
@@ -38,17 +37,17 @@ public class No_06_2108 {
             }
         }
 
-        // cnt ¹è¿­¿¡¼­ °¡Àå ¸¹Àº ¼ö ±¸ÇÏ±â
+        // cnt ï¿½è¿­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
 
         int maxCnt = Integer.MIN_VALUE;
         int minIdx = Integer.MAX_VALUE;
-        boolean flag = false;       // ÀÌÀü¿¡ ÇÑ ¹ø¸¸ °°Àº °³¼ö°¡ Á¸ÀçÇÏ´ÂÁö
+        boolean flag = false;       // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½
         for (int i = 0; i < cnt.length; i++) {
-            if (cnt[i] > maxCnt) {                 // ´õ ¸¹Àº °³¼ö°¡ ÀÖ´ÂÁö
+            if (cnt[i] > maxCnt) {                 // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½
                 maxCnt = cnt[i];
                 minIdx = i - 4000;
                 flag = true;
-            } else if (cnt[i] == maxCnt && flag == true) {         // °°Àº °³¼ö°¡ ÀÖ´ÂÁö
+            } else if (cnt[i] == maxCnt && flag == true) {         // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½
                 minIdx = i - 4000;
                 flag = false;
             }

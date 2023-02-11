@@ -1,4 +1,4 @@
-package ch09_array_2dim;
+package baekjoon.ch09_array_2dim;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,14 +22,14 @@ public class No_01_2738 {
 
         arr = new int[row][col];
 
-        //¹è¿­ ÃÊ±âÈ­
+        //ï¿½è¿­ ï¿½Ê±ï¿½È­
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 arr[i][j] = 0;
             }
         }
 
-        //¹è¿­ µ¡¼À
+        //ï¿½è¿­ ï¿½ï¿½ï¿½ï¿½
         for (int k = 0; k < 2; k++) {
             for (int i = 0; i < row; i++) {
                 str = br.readLine();
@@ -40,7 +40,7 @@ public class No_01_2738 {
             }
         }
 
-        //¹è¿­ Ãâ·Â
+        //ï¿½è¿­ ï¿½ï¿½ï¿½
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 sb.append(arr[i][j]).append(" ");

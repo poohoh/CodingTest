@@ -1,4 +1,4 @@
-package ch10_sort;
+package baekjoon.ch10_sort;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package ch08_math2;
+package baekjoon.ch08_math2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

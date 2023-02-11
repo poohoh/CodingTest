@@ -1,4 +1,4 @@
-package ch04_array;
+package baekjoon.ch04_array;
 
 import java.io.BufferedReader;
 import java.io.IOException;
