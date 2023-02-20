@@ -15,25 +15,38 @@ public class No_03 {
         int M = Integer.parseInt(st.nextToken());
 
         int[][] arr = new int[N][M];
+        int min;
+        int result = Integer.MIN_VALUE;
+        int temp;
 
         for (int i = 0; i < N; i++) {
+
+            min = Integer.MAX_VALUE;
             st = new StringTokenizer(br.readLine());
+
             for (int j = 0; j < M; j++) {
-                arr[i][j] = Integer.parseInt(st.nextToken());
+                temp  = Integer.parseInt(st.nextToken());
+                arr[i][j] = temp;
+                if (min > temp) {
+                    min = temp;
+                }
+            }
+
+            if (result < min) {
+                result = min;
             }
         }
 
-        int min = Integer.MIN_VALUE;
 
-        for (int i = 0; i < N; i++) {
+        /*for (int i = 0; i < N; i++) {
             Arrays.sort(arr[i]);
 
             if (min < arr[i][0]) {
                 min = arr[i][0];
             }
-        }
+        }*/
 
-        System.out.println(min);
+        System.out.println(result);
 
     }
 }
