@@ -1,0 +1,16 @@
+package thisIsCodingTest.ch05_DFS_BFS;
+
+public class No_04 {
+    public static void main(String args[]) {
+        recursive(1);
+    }
+
+    public static void recursive(int i) {
+        if (i == 100) {
+            return;
+        }
+        System.out.println(i + "번째 함수에서 " + (i + 1) + "번째 함수를 호출합니다.");
+        recursive(i + 1);
+        System.out.println(i + "번째 함수를 종료합니다.");
+    }
+}
