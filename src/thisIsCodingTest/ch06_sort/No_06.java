@@ -5,7 +5,7 @@ public class No_06 {
 
         StringBuilder sb = new StringBuilder();
 
-        int[] array = {7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2};
+        int[] arr = {7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2};
         int[] count = new int[10];
 
         /*
@@ -16,8 +16,8 @@ public class No_06 {
         */
 
         // 각 데이터에 해당하는 인덱스 값 증가
-        for (int i = 0; i < array.length; i++) {
-            count[array[i]]++;
+        for (int i = 0; i < arr.length; i++) {
+            count[arr[i]]++;
         }
 
         // 각 인덱스 개수만큼 출력
