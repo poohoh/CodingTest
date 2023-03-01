@@ -3,6 +3,7 @@ package thisIsCodingTest.ch07_search;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class No_05 {
@@ -30,6 +31,9 @@ public class No_05 {
             targets[i] = Integer.parseInt(st.nextToken());
         }
 
+        // 전체 원소 정렬
+        Arrays.sort(arr);
+
         // 이진 탐색
         for (int i = 0; i < M; i++) {
             if (binarySearch(arr, targets[i], 0, arr.length - 1)) {
@@ -41,7 +45,7 @@ public class No_05 {
 
     }
 
-    public static boolean binarySearch(int[] arr, int target, int start, int end) {
+    /*public static boolean binarySearch(int[] arr, int target, int start, int end) {
 
         if (start > end) {
             return false;
@@ -57,6 +61,25 @@ public class No_05 {
             return binarySearch(arr, target, mid + 1, end);
         }
 
-    }
+    }*/
 
+    public static boolean binarySearch(int[] arr, int target, int start, int end) {
+
+        int mid;
+
+        while (start <= end) {
+            mid = (start + end) / 2;
+
+            if (arr[mid] == target) {
+                return true;
+            } else if (arr[mid] > target) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+
+        }
+
+        return false;
+    }
 }
