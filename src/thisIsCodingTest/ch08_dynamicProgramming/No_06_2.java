@@ -26,7 +26,7 @@ public class No_06_2 {
 
         // 식량 창고 누적 계산
         sum[1] = food[1];
-        sum[2] = food[2];
+        sum[2] = Math.max(food[1], food[2]);
         for (int i = 3; i <= N; i++) {
             sum[i] = Math.max(sum[i - 1], sum[i - 2] + food[i]);
         }
