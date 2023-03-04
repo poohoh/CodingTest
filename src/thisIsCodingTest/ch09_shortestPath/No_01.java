@@ -1,4 +1,4 @@
-package thisIsCodingTest.shortestPath;
+package thisIsCodingTest.ch09_shortestPath;
 
 import java.io.BufferedReader;
 import java.io.IOException;
