@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class No_01_2 {
+public class No_02 {
 
     static ArrayList<ArrayList<Node1>> graph = new ArrayList<>();
     static int[] distance = new int[100001];
