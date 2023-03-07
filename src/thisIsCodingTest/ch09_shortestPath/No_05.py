@@ -17,7 +17,6 @@ for _ in range(m):
     a, b, c = map(int, input().split())
     graph[a].append((b, c))
 
-
 # 다익스트라 알고리즘
 def dijkstra(start):
     q = []
@@ -35,7 +34,7 @@ def dijkstra(start):
 
             if cost < distance[i[0]]:
                 distance[i[0]] = cost
-                heapq.heappush(cost, i[0])
+                heapq.heappush(q, (cost, i[0]))
 
 
 # 다익스트라 알고리즘 수행
@@ -45,10 +44,12 @@ dijkstra(start)
 count = 0
 
 # 도달할 수 있는 노드 중에서 가장 먼 노드의 최단 거리
+max_distance = 0
+
 for d in distance:
     if d != INF:
         count += 1
         max_distance = max(max_distance, d)
 
 # 시작 노드는 제외하므로 count-1 출력
-print(count - 1)
+print(count - 1, max_distance)
