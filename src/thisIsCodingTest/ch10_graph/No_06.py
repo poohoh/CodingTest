@@ -11,20 +11,21 @@ graph = [[] for i in range(v + 1)]
 
 # 방향 그래프 간선 정보 입력
 for _ in range(e):
-    a,b = map(int, input().split())
+    a, b = map(int, input().split())
     graph[a].append(b)
 
     # 진입차수 1 증가
-    indegree[b] +=1
+    indegree[b] += 1
+
 
 # 위상 정렬 함수
 def topology_sort():
-    result = []     # 알고리즘 수행 결과를 담을 리스트
-    q = deque()     # 큐 기능을 위한 deque 라이브러리 사용
+    result = []  # 알고리즘 수행 결과를 담을 리스트
+    q = deque()  # 큐 기능을 위한 deque 라이브러리 사용
 
     # 처음 시작할 때는 진입차수가 0인 노드 큐에 삽입
-    for i in range(1, v+1):
-        if indegree[i] ==0:
+    for i in range(1, v + 1):
+        if indegree[i] == 0:
             q.append(i)
 
     # 큐가 빌 때까지 반복
@@ -44,5 +45,6 @@ def topology_sort():
     # 위상 정렬을 수행한 결과 출력
     for i in result:
         print(i, end=' ')
+
 
 topology_sort()
