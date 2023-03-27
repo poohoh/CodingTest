@@ -5,8 +5,8 @@ while True:
 
     sum = 0
     divisors = []
-    for i in range(1, n//2+1):
-        if n%i==0:
+    for i in range(1, n // 2 + 1):
+        if n % i == 0:
             sum += i
             divisors.append(i)
 
