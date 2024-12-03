@@ -16,9 +16,9 @@ while True:
             break
         else:
             start = height
-            height = (end+height) // 2
+            height = round((end+height) / 2)
     else:
         end = height
-        height = (start+height) // 2
+        height = round((start+height) / 2)
 
 print(height)
